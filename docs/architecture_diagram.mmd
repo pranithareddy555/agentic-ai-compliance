@@ -1,0 +1,18 @@
+flowchart TD
+    A[User / Client] --> B[FastAPI API Layer]
+    B --> C[LangGraph Orchestrator]
+
+    C --> D[Researcher Agent]
+    D --> E[(Regulation Knowledge Base\nChroma / Fallback Retriever)]
+    E --> D
+    D --> F[Auditor Agent]
+    F -->|Insufficient context| D
+    F -->|Enough evidence| G[Reporting Agent]
+
+    G --> H{Human approval required?}
+    H -->|Yes| I[Compliance Officer Review]
+    I -->|Approve / Reject| C
+    H -->|No| J[Final Compliance Report]
+
+    C --> K[(Audit Store JSON)]
+    J --> K

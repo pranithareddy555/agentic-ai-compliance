@@ -1,0 +1,7 @@
+KYC Regulations:
+
+- All customers must undergo identity verification (KYC) before onboarding.
+- Anonymous transactions are strictly prohibited.
+- Transactions above regulatory thresholds must be reported.
+- Enhanced due diligence is required for high-risk customers.
+- Financial institutions must maintain audit logs of all transactions.
