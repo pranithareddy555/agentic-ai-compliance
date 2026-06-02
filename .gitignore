@@ -5,3 +5,11 @@ __pycache__/
 storage/
 .pytest_cache/
 venv/
+__pycache__/
+*.pyc
+.venv/
+.env
+storage/
+.pytest_cache/
+venv/
+.DS_Store
