@@ -186,16 +186,16 @@ This is the “agentic routing” requirement from the project brief.
 The graph intentionally pauses before final completion.  
 This mirrors a realistic compliance workflow, because AI should assist the review, not make final legal decisions alone.
 
-LangGraph's interrupt pattern is the conceptual basis for this pause-and-resume flow. citeturn614721search4turn614721search16
+LangGraph's interrupt pattern is the conceptual basis for this pause-and-resume flow.
 
 ---
 
 ## 9) Why these technologies fit the brief
 
-- **FastAPI** provides typed REST endpoints and strong response validation through response models. citeturn614721search1turn614721search13
-- **LangGraph** is designed for durable orchestration, interrupts, and human-in-the-loop agent workflows. citeturn614721search4turn614721search16
-- **Pydantic** provides strict validation utilities such as `model_validate_json()` and strict configuration patterns for structured outputs. citeturn614721search3turn614721search7turn614721search19
-- **Chroma** supports both in-memory and persistent local clients, which makes it a practical local vector database for this project. citeturn614721search2turn614721search6turn614721search14
+- **FastAPI** provides typed REST endpoints and strong response validation through response models.
+- **LangGraph** is designed for durable orchestration, interrupts, and human-in-the-loop agent workflows.
+- **Pydantic** provides strict validation utilities such as `model_validate_json()` and strict configuration patterns for structured outputs.
+- **Chroma** supports both in-memory and persistent local clients, which makes it a practical local vector database for this project.
 
 ---
 
@@ -209,38 +209,3 @@ LangGraph's interrupt pattern is the conceptual basis for this pause-and-resume 
 - `docs/architecture_diagram.png` → rendered architecture image
 
 ---
-
-## 11) Important note for evaluation
-
-This repository is deliberately built to be:
-- understandable by non-experts
-- easy to run locally
-- aligned to the four-week roadmap
-- extensible for more regulations, more tools, and stronger LLMs later
-
-For production, you would still add:
-- authentication
-- better document parsers (PDF/DOCX)
-- persistent LangGraph state backend
-- richer citations
-- model observability
-- more jurisdiction-specific regulations
-- stronger legal review controls
-
-
-## Browser UI
-
-This repository now includes a Streamlit frontend in `streamlit_app.py` so the workflow can be demoed through a user-facing UI instead of Swagger alone.
-
-### Start backend + UI together
-
-```bash
-./run_ui.sh
-```
-
-### Open
-
-- FastAPI docs: `http://127.0.0.1:8000/docs`
-- Streamlit UI: `http://localhost:8501`
-
-See `docs/UI_RUNBOOK.md` for the detailed UI flow.
