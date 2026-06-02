@@ -1,8 +1,0 @@
-#!/bin/sh
-'''exec' "/Users/pranithareddy/Desktop/infyntrek systems project-2/agentic_ai_compliance_project 2/venv/bin/python3" "$0" "$@"
-' '''
-import sys
-from tqdm.cli import main
-if __name__ == '__main__':
-    sys.argv[0] = sys.argv[0].removesuffix('.exe')
-    sys.exit(main())
