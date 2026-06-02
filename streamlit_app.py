@@ -60,7 +60,9 @@ def api_post(path: str, payload: Dict[str, Any]) -> requests.Response:
 def load_sample_policies() -> Dict[str, str]:
     samples: Dict[str, str] = {}
     if SAMPLE_POLICY_PATH.exists():
-        for file in sorted(SAMPLE_POLICY_PATH.glob("*.txt")):
+        for file in sorted(SAMPLE_POLICY_PATH.glob("*")):
+            if file.suffix.lower() not in {".txt", ".md"}:
+                continue
             samples[file.name] = file.read_text(encoding="utf-8")
     return samples
 
